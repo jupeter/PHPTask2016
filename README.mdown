@@ -11,23 +11,22 @@ Results are visible in terminal output and logged into log/log.txt file.
 Report include the date of the test, execution time for the site being tested and
 competitors and a comparison between the results.
 
-This library implements the [PSR-2](httpshttps://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
-log levels.
+This library implements the [PSR-2](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
+coding standard.
 
 ## Installation
 
 Load dependence
 
 ```bash
-$ composer update
+$ composer install
 ```
 
 Configure
 
 ```bash
-$ cd config
-$ cp app.ini.sample app.ini
-$ nano app.ini
+$ cp config/app.ini.sample config/app.ini
+$ nano config/app.ini
 ```
 
 ## Basic Usage
@@ -52,4 +51,4 @@ This app is licensed under the MIT License - see the `LICENSE` file for details
 
 ### Acknowledgements
 
-This library is inspired by XSolve test (xsolve.pl).
+This library is inspired by XSolve test (<xsolve.pl>).
