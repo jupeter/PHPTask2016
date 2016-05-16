@@ -4,9 +4,9 @@ namespace Task\Report;
 
 /*
  * This file is part of sample Task command package.
- * 
+ *
  * (c) Piotr Plenik <piotr.plenik@gmail.com>
- * 
+ *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
@@ -36,12 +36,10 @@ class Report
     public function getFastest(): ReportItem
     {
         // at begin set as fastest first item
-        $first = $this->getFirst();
-        $executionTime = $first->getExecutionTime();
-        $fastest = $first;
+        $fastest = $this->getFirst();
 
         foreach ($this->results as $row) {
-            if ($row->getExecutionTime() < $executionTime) {
+            if ($row->getExecutionTime() < $fastest->getExecutionTime()) {
                 $fastest = $row;
             }
         }
