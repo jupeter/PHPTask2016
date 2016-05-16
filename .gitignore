@@ -1,0 +1,8 @@
+log/log.txt
+config/app.ini
+phpunit.xml
+vendor
+composer.lock
+# Inteliidea files
+*.iml
+.idea

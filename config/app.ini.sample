@@ -1,0 +1,11 @@
+[application]
+emailFrom = "yourmail@localhost"
+emailTo = "yourmail@localhost"
+smsTo = "+48692552733"
+;
+; SMTP configuration
+;
+smtpHost = "smtp.example.org"
+smtpPort = 25
+smtpUsername = "your username"
+smtpPassword = "your password"

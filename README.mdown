@@ -1,0 +1,55 @@
+# PHPTask 2016 - Example PHP 7 Showcase
+
+This is sample command line application, that benchmark loading time of
+the website in comparison to the other websites (check how fast is
+the website's loading time in comparison to other competitors).
+
+Command that will accept two parameters: "website url" and "other websites urls".
+
+Results are visible in terminal output and logged into log/log.txt file.
+
+Report include the date of the test, execution time for the site being tested and
+competitors and a comparison between the results.
+
+This library implements the [PSR-2](httpshttps://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
+log levels.
+
+## Installation
+
+Load dependence
+
+```bash
+$ composer update
+```
+
+Configure
+
+```bash
+$ cd config
+$ cp app.ini.sample app.ini
+$ nano app.ini
+```
+
+## Basic Usage
+
+```bash
+./bin/console compare:websites "http://facebook.com" "http://twitter.com" "http://www.linkedin.com/"
+```
+
+## About
+
+### Requirements
+
+- This app is working with PHP 7 or above.
+
+### Author
+
+Piotr Plenik - <piotr.plenik@gmail.com><br />
+
+### License
+
+This app is licensed under the MIT License - see the `LICENSE` file for details
+
+### Acknowledgements
+
+This library is inspired by XSolve test (xsolve.pl).

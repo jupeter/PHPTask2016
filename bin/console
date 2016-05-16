@@ -1,0 +1,19 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1); // PHP7: Declare strict type
+
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\Input\ArgvInput;
+use Task\Command\WebsiteLoadTimeBenchmarkCommand;
+
+/**
+ * @var Composer\Autoload\ClassLoader $loader
+ */
+$loader = require __DIR__.'/../vendor/autoload.php';
+
+$input = new ArgvInput();
+
+$application = new Application();
+$application->add(new WebsiteLoadTimeBenchmarkCommand());
+$application->run($input);
