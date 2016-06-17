@@ -23,7 +23,7 @@ class Url
     /**
      * Check if URL is correct
      *
-     * @param string|array $value The url or collection of urls
+     * @param  string|array $value The url or collection of urls
      * @return bool True if pass validation
      */
     public function validate($value): bool

@@ -33,7 +33,10 @@ class WebsiteLoadTimeBenchmarkCommand extends Command
     {
         $this
             ->setName('compare:websites')
-            ->setDescription('Compare two websites (check how fast is the website\'s loading time in comparison to other competitors)')
+            ->setDescription(
+                'Compare two websites (check how fast is the website\'s'.
+                ' loading time in comparison to other competitors)'
+            )
             ->addArgument(
                 'firstWebsite',
                 InputArgument::REQUIRED,
@@ -43,8 +46,7 @@ class WebsiteLoadTimeBenchmarkCommand extends Command
                 'secondWebsites',
                 InputArgument::IS_ARRAY,
                 'Comma separated Second websites URLs (for example "http://www.php.net", "http://www.xsolve.pl")'
-            )
-        ;
+            );
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)

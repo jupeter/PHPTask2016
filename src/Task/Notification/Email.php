@@ -25,8 +25,7 @@ class Email implements NotificationInterface
 
         $transport = \Swift_SmtpTransport::newInstance($config->getSmtpHost(), $config->getSmtpPort())
             ->setUsername($config->getSmtpUsername())
-            ->setPassword($config->getSmtpPort())
-        ;
+            ->setPassword($config->getSmtpPort());
 
         $this->mailer = \Swift_Mailer::newInstance($transport);
 
@@ -45,8 +44,7 @@ class Email implements NotificationInterface
             ->setSubject($subject)
             ->setFrom($this->emailFrom)
             ->setTo($this->emailTo)
-            ->setBody($message)
-        ;
+            ->setBody($message);
 
         $result = $this->mailer->send($message);
 

@@ -77,6 +77,7 @@ class Curl
 
     /**
      * Get status code
+     *
      * @return int
      */
     public function getHttpStatusCode(): int

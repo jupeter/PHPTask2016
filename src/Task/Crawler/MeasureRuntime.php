@@ -21,7 +21,9 @@ use Task\Logger\ExecutionTimeLoggerTrait;
  */
 class MeasureRuntime
 {
-    /** @var Curl */
+    /**
+ * @var Curl
+*/
     protected $curl;
     protected $executionTime;
     protected $curlTotalTime;

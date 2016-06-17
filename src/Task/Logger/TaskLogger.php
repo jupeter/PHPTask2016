@@ -25,8 +25,8 @@ class TaskLogger
     {
         $this->log = new Logger($name);
         $this->log->pushHandler(
-             new StreamHandler($this->getLogFilename(), Logger::INFO)
-         );
+            new StreamHandler($this->getLogFilename(), Logger::INFO)
+        );
     }
 
     public function info($message, array $context = array())

@@ -67,7 +67,8 @@ class ReportItem
 
     /**
      * Divide execution time of two ReportItems
-     * @param ReportItem $reportItem
+     *
+     * @param  ReportItem $reportItem
      * @return float
      */
     public function divideExecutionTime(ReportItem $reportItem): float

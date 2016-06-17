@@ -37,8 +37,7 @@ class ReportTable
         $table = new Table($this->output);
         $table
             ->setHeaders($this->getHeaders())
-            ->setRows($this->getRows($report))
-        ;
+            ->setRows($this->getRows($report));
 
         $table->render();
     }
@@ -61,7 +60,7 @@ class ReportTable
     /**
      * Get Rows
      *
-     * @param Report $report
+     * @param  Report $report
      * @return array
      */
     protected function getRows(Report $report): array

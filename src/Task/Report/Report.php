@@ -18,7 +18,9 @@ namespace Task\Report;
  */
 class Report
 {
-    /** @var ReportItem[] */
+    /**
+ * @var ReportItem[]
+*/
     protected $results = false;
 
     public function add(ReportItem $item)
