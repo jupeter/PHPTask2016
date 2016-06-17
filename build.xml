@@ -15,7 +15,7 @@
 
     <!-- Default target -->
     <target name="build:main"
-            depends="build:clean, build:prepare, build:check, build:test"
+            depends="build:clean, build:prepare, composer, build:check, build:test"
             description="Run all test and build everything" />
 
     <!-- Check target -->
@@ -87,6 +87,16 @@
     <target name="test:unit" description="Executes unit tests.">
         <echo msg="Running unit tests ..." />
         <exec command="phpunit --log-junit ${dir.reports}/phpunit.xml --coverage-clover ${dir.reports.coverage}/clover.xml --coverage-html ${dir.reports.coverage}/"/>
+    </target>
+
+    <!-- Composer install -->
+    <target name="composer" description="Installing composer dependencies">
+        <exec executable="composer">
+            <arg value="install" />
+            <arg value="--dev" />
+            <arg value="--prefer-dist" />
+            <arg value="--no-progress" />
+        </exec>
     </target>
 
 </project>
