@@ -15,6 +15,8 @@ namespace Task\Notification;
  * NotificationInterface interface
  *
  * @author Piotr Plenik <piotr.plenik@gmail.com>
+ *
+ * @codeCoverageIgnore
  */
 interface NotificationInterface
 {
