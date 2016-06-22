@@ -86,7 +86,7 @@
     <!-- Unit tests -->
     <target name="test:unit" description="Executes unit tests.">
         <echo msg="Running unit tests ..." />
-        <exec command="phpunit --log-junit ${dir.reports}/phpunit.xml --coverage-clover ${dir.reports.coverage}/clover.xml --coverage-html ${dir.reports.coverage}/"/>
+        <exec command="phpunit --log-junit ${dir.reports}/phpunit.xml --coverage-clover ${dir.reports.coverage}/clover.xml --coverage-html ${dir.reports.coverage}/ --coverage-crap4j ${dir.reports}/crap4j.xml"/>
     </target>
 
     <!-- Composer install -->
