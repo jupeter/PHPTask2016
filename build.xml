@@ -20,7 +20,7 @@
 
     <!-- Check target -->
     <target name="build:check"
-            depends="check:cs, check:md, check:cpd, check:depend"
+            depends="check:cs, check:md, check:cpd, check:depend, check:phploc"
             description="Analyzes app code." />
 
     <!-- Test target -->
@@ -83,10 +83,20 @@
         </phpdepend>
     </target>
 
+    <!-- Line of codes metric -->
+    <target name="check:phploc" description="Measure project size using PHPLOC">
+        <echo msg="Measure project size using PHPLOC" />
+        <exec executable="bin/phploc">
+            <arg value="--log-csv" />
+            <arg value="${dir.reports}/phploc.csv" />
+            <arg path="${dir.src}" />
+        </exec>
+    </target>
+
     <!-- Unit tests -->
     <target name="test:unit" description="Executes unit tests.">
         <echo msg="Running unit tests ..." />
-        <exec command="phpunit --log-junit ${dir.reports}/phpunit.xml --coverage-clover ${dir.reports.coverage}/clover.xml --coverage-html ${dir.reports.coverage}/ --coverage-crap4j ${dir.reports}/crap4j.xml"/>
+        <exec command="phpunit"/>
     </target>
 
     <!-- Composer install -->

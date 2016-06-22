@@ -16,7 +16,8 @@
         "symfony/console": "^3.0",
         "monolog/monolog": "^1.19",
         "respect/validation": "^1.1",
-        "swiftmailer/swiftmailer": "^5.4"
+        "swiftmailer/swiftmailer": "^5.4",
+        "phploc/phploc": "^3.0"
     },
     "require-dev": {
         "phpunit/phpunit": "5.3.*",
